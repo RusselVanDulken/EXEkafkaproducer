@@ -97,18 +97,14 @@ public class Producer implements ApplicationRunner {
         message masscan1 = new message();
         masscan1.setId(dateName);
         masscan1.setMasscan(JSON.toJSONString(masscan_json));
-        masscanService.insert(masscan1);
+//        masscanService.insert(masscan1);// database
         System.out.println(masscan1.getMasscan());
-        //masscanService.insert(masscan1);
-
-
     }
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        for (int i = 0 ;i < 10 ; i++){
+        for (int i=0;i<10;i++){
             Thread.sleep(1000);
-            sendtest();
+            sendtest();//kafka
         }
     }
 }
