@@ -1,0 +1,59 @@
+{
+  "device_id": "kibo",
+  "ip": "192.168.103.150",
+  "mac": "mac-mac",
+  "os": "Microsoft Windows 10 1607",
+  "ports": [
+    {
+      "name": "smtp",
+      "portid": "25",
+      "protocol": "tcp"
+    },
+    {
+      "name": "pop3",
+      "portid": "110",
+      "protocol": "tcp"
+    },
+    {
+      "name": "msrpc",
+      "portid": "135",
+      "protocol": "tcp"
+    },
+    {
+      "name": "netbios-ssn",
+      "portid": "139",
+      "protocol": "tcp"
+    },
+    {
+      "name": "microsoft-ds",
+      "portid": "445",
+      "protocol": "tcp"
+    },
+    {
+      "name": "afp",
+      "portid": "548",
+      "protocol": "tcp"
+    },
+    {
+      "name": "iss-realsecure",
+      "portid": "902",
+      "protocol": "tcp"
+    },
+    {
+      "name": "apex-mesh",
+      "portid": "912",
+      "protocol": "tcp"
+    },
+    {
+      "name": "ms-wbt-server",
+      "portid": "3389",
+      "protocol": "tcp"
+    },
+    {
+      "name": "wsdapi",
+      "portid": "5357",
+      "protocol": "tcp"
+    }
+  ],
+  "timestamp": "19.20"
+}

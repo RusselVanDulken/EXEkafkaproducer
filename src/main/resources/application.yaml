@@ -1,0 +1,51 @@
+# 应用名称
+server:
+  port: 81
+spring:
+  application:
+    name: kafkaproducer
+  datasource:
+    url: jdbc:mysql://localhost:3306/exercise?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  kafka:
+    bootstrap-servers: 10.16.105.91:9092
+    properties:
+      ssl:
+        endpoint:
+          identification:
+            algorithm: ''
+    ssl:
+      trust-store-password: shenghui2021
+      trust-store-location: classpath:kafka/client.trustkeystore.jks
+      #      trust-store-location: classpath:kafka/client.trustkeystore.jks
+      key-store-type: JKS
+    consumer:
+      auto-offset-reset: latest
+      max-poll-records: 100
+      max-partition-fetch-bytes: 1000000
+      max-poll-interval-ms: 100000
+      properties:
+        security:
+          protocol: SASL_SSL
+        sasl:
+          mechanism: PLAIN
+          jaas:
+            config: org.apache.kafka.common.security.scram.ScramLoginModule required username="consumer" password="12345678";
+    producer:
+      properties:
+        security:
+          protocol: SASL_SSL
+        sasl:
+          mechanism: PLAIN
+          jaas:
+            config: org.apache.kafka.common.security.scram.ScramLoginModule required username="producer" password="12345678";
+mybatis:
+  type-aliases-package: com.example.kafkaproducer.model
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+
